@@ -351,7 +351,7 @@ function messageHandler(serviceBusTask, context, sumoClient) {
         } else {
             serviceBusTask.startByte -= JSON_BLOB_TAIL_BYTES;
         }
-
+        msghandler = jsonHandler;
     } else {
         context.done("Unknown file extension: " + file_ext + " for blob: " + serviceBusTask.blobName);
         return;
